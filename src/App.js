@@ -3,19 +3,19 @@ import { useState } from "react";
 const initialFriends = [
   {
     id: 118836,
-    name: "Clark",
-    image: "https://i.pravatar.cc/48?u=2001521",
+    name: "Ahmed",
+    image: "https://i.pravatar.cc/48?u=56wer2333r445",
     balance: -7,
   },
   {
     id: 933372,
-    name: "Sarah",
-    image: "https://i.pravatar.cc/48?u=933372",
+    name: "Hema",
+    image: "https://i.pravatar.cc/48?u=56445",
     balance: 20,
   },
   {
     id: 499476,
-    name: "Anthony",
+    name: "Medo",
     image: "https://i.pravatar.cc/48?u=499476",
     balance: 0,
   },
