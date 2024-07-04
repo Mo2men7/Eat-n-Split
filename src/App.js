@@ -55,26 +55,33 @@ export default function App() {
   }
 
   return (
-    <div className="app">
-      <div className="sidebar">
-        <FirendsList
-          freinds={freinds}
-          selectedFriend={selectedFriend}
-          onSelect={handleSelection}
-        />
-        {showAddFriend && <FormAddFriend addFriend={handleAddFriend} />}
-        <Button onClick={handleShowAddFriend}>
-          {showAddFriend ? "Close" : "Add Friend"}
-        </Button>
+    <>
+      <Header />
+      <div className="app">
+        <div className="sidebar">
+          <FirendsList
+            freinds={freinds}
+            selectedFriend={selectedFriend}
+            onSelect={handleSelection}
+          />
+          {showAddFriend && <FormAddFriend addFriend={handleAddFriend} />}
+          <Button onClick={handleShowAddFriend}>
+            {showAddFriend ? "Close" : "Add Friend"}
+          </Button>
+        </div>
+        {selectedFriend && (
+          <FormSplitBill
+            selectedFriend={selectedFriend}
+            onSplitBill={handleSplitBill}
+          />
+        )}
       </div>
-      {selectedFriend && (
-        <FormSplitBill
-          selectedFriend={selectedFriend}
-          onSplitBill={handleSplitBill}
-        />
-      )}
-    </div>
+    </>
   );
+}
+
+function Header() {
+  return <h1 className="header">Bill Splitter</h1>;
 }
 
 function Button({ children, onClick }) {

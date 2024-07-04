@@ -33,6 +33,13 @@ body {
   align-items: start;
 }
 
+.header {
+  background-color: var(--color-medium);
+  text-align: center;
+  font-size: 42px;
+  padding: 14px 5px;
+}
+
 .button {
   background-color: var(--color-medium);
   color: #343a40;
